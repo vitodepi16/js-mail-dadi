@@ -14,8 +14,9 @@ const listEmail = [
     'booleanservice@gmail.com'
 ]
 
-const btn = document.querySelector('button');
-btn.addEventListener('click', checkemail);
+const btnSend = document.getElementById('send');
+const btnCanc = document.getElementById('canc');
+btnSend.addEventListener('click', checkemail);
 
 function checkemail(e){
     e.preventDefault();
@@ -28,9 +29,20 @@ function checkemail(e){
         
     }
         if (emailTrue){
-            console.log('La tua email è giusta');
+            document.getElementById('resultemail').innerHTML =
+            `
+            <h2 class="text-success-emphasis text-center text-uppercase fs-2 fw-semibold"> Congratulazioni la tua E-mail è corretta !
+            Puoi entrare nella festa privata di Boolean</h2>
+            `
     }   else{
-            console.log('Hai sbaglaito email');
+        document.getElementById('resultemail').innerHTML =
+        `
+        <h2 class="text-danger-emphasis text-center text-uppercase fs-2 fw-semibold"> mi dispiace ma non sei ammesso alla festa di Boolean, sarà per una prossima volta !</h2>
+        `
         }
 
 }
+// const btnCanc = document.getElementById('canc');
+btnCanc.addEventListener('click', function() {
+    document.getElementById('resultemail').innerHTML = '';
+})
