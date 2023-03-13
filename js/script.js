@@ -13,9 +13,11 @@ const listEmail = [
 
 const btnSend = document.getElementById('send');
 const btnCanc = document.getElementById('canc');
-btnSend.addEventListener('click', checkemail);
 
-function checkemail(e){
+
+if (btnSend != null){
+    btnSend.addEventListener('click', checkemail);
+    function checkemail(e){
     e.preventDefault();
     let emailTrue = '';
     const search = document.getElementById('emailCheck').value;
@@ -39,19 +41,63 @@ function checkemail(e){
         }
 
 }
-// const btnCanc = document.getElementById('canc');
-btnCanc.addEventListener('click', function() {
+}
+
+if (btnCanc != null){
+    btnCanc.addEventListener('click', function() {
     document.getElementById('resultemail').innerHTML = '';
 })
+
+}
 
 // ESERCIO DADI
 // Gioco dei dadi
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-const btnThrow = document.getElementById('btnThrow');
-btnThrow.addEventListener('click', throw );
-
-function throw(){
-    
+function rndNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
+const btnThrow = document.getElementById('btnThrow');
+
+if (btnThrow != null){
+
+    btnThrow.addEventListener('click', function(){
+     let userDice =  rndNumber(1,6);
+    let botDice = rndNumber (1,6); 
+    console.log(userDice);
+    console.log(botDice);
+    document.getElementById('userResults').innerHTML = userDice;
+    document.getElementById('botResults').innerHTML =
+    botDice;
+    if (botDice > userDice ){
+        document.getElementById('result').innerHTML =
+        `
+        <h2>Hai Perso, peccato</h2>
+        `;
+    }
+    else if (botDice === userDice ){
+        document.getElementById('result').innerHTML =
+        `
+        <h2>Hai Pareggiato, Ritenta</h2>
+        `;
+    }
+    else{
+        document.getElementById('result').innerHTML =
+        `
+        <h2>Hai vinto!!</h2>
+        `;
+    }
+
+})
+
+}
+
+
+   
+
+
+
+
+
+
