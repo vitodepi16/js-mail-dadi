@@ -12,12 +12,15 @@
   <body class="container email">
 <div>
         <h1>Controllo email</h1>
-        <div id="boxEmail" class="d-flex justify-content-center">
+        <div id="boxEmail" class="d-flex justify-content-center vh-100">
             <form>
-                <div class="mb-2">
-                    <label for="name" class="form-label">E-mail</label>
-                    <input type="email" name="email" id="emailCheck" placeholder="Inserisci la tua E-mail" >
-                    <button type="submit" class="btn btn-success">Invia</button>
+                
+                    <label for="e-mail" class="form-label"> Inserisci la tua E-mail</label>
+                    <input type="email" name="email" id="emailCheck" placeholder="Inserisci la tua E-mail">
+                    <button type="submit" id="send" class="btn btnSend btn-success">Invia</button>
+                    <button type="reset" id="canc" class="btnCanc btn btn-light">Reset</button>
+                <div id="resultemail">
+                   
                 </div>
 
             </form>
