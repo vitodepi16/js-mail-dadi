@@ -8,7 +8,8 @@ const listEmail = [
     'depalmavito98@gmail.com',
     'casualemail@outlook.com',
     'pinkopallo69@libero.it',
-    'booleanservice@gmail.com'
+    'booleanservice@gmail.com',
+    
 ]
 
 const btnSend = document.getElementById('send');
@@ -73,19 +74,19 @@ if (btnThrow != null){
     if (botDice > userDice ){
         document.getElementById('result').innerHTML =
         `
-        <h2>Hai Perso, peccato</h2>
+        <h2 class="text-danger" >Hai Perso, peccato :(</h2>
         `;
     }
     else if (botDice === userDice ){
         document.getElementById('result').innerHTML =
         `
-        <h2>Hai Pareggiato, Ritenta</h2>
+        <h2>Hai Pareggiato, Ritenta sarai più fortunat*</h2>
         `;
     }
     else{
         document.getElementById('result').innerHTML =
         `
-        <h2>Hai vinto!!</h2>
+        <h2 class="text-success">Hai vinto!!</h2>
         `;
     }
 

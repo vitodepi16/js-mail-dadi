@@ -11,12 +11,15 @@
   </head>
   <body class="container email">
 <div>
-        <h1>Controllo email</h1>
+        <h1 class="text-center">Sei stato invitato alla festa di boolean?</h1>
+        <h4 class="text-center">Prova a scoprirlo mettendo la tua email, chissà magari sei il fortunato ! </h4>
         <div id="boxEmail" class="d-flex justify-content-center vh-100">
             <form>
-                
-                    <label for="e-mail" class="form-label"> Inserisci la tua E-mail</label>
-                    <input type="email" name="email" id="emailCheck" placeholder="Inserisci la tua E-mail">
+                <div class="mb-3">
+                     <label for="e-mail" class="form-label"> Inserisci la tua E-mail</label>
+                      <input type="email" name="email" id="emailCheck" placeholder="Inserisci la tua E-mail">
+                      <div id="emailHelp" class="form-text">Prova con: 'casualemail@outlook.com'</div>
+                </div>
                     <button type="submit" id="send" class="btn btnSend btn-success">Invia</button>
                     <button type="reset" id="canc" class="btnCanc btn btn-light">Reset</button>
                 <div id="resultemail"> 
